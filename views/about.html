@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>about</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:800|Raleway:300&subset=latin-ext');
+        body {
+            background-color: #fffefc;
+        }
+    </style>
+    
+     <link rel="stylesheet" type="text/css" href="/about.css"/>
+    
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+    </script>
+    
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js">
+</script>
+    
+<script type="text/javascript">
+        $(document).ready(function(){
+             console.log ("i am ready!")
+                $('#myForm').validate({
+                    rules : {
+                        name : {
+                            required: true,
+                               minlength: 3},
+                        email : {required: true,
+                                email: true},
+                        comment : {required: true,
+                                minlength: 5}
+                            },
+                    messages :{
+                        name : {minlength : jQuery.validator.format("Please enter at least 3 characters")},
+                        email : {email : jQuery.validator.format("Please enter a valid email address")},
+                        comment : {minlength : jQuery.validator.format("Please enter at least 5 characters")}     
+                            },
+                });
+        });
+        
+    </script>
+    </head>
+    <body>
+        <div class="bg">
+        </div>
+<div id="about">
+    <h2>ABOUT US HUMANS</h2>
+   <p >US HUMANS draws inspiration from "Humans of New York", 
+     a photoblog and book of street portraits and interviews  
+     collected on the streets of New York City. Although
+    we may wish to clone Brandon Stanton, I started
+     on us humans to encourage dialogue among people
+       of diverse backgrounds and interests.</p>
+</div>
+ 
+  <form action="/action_page.php">
+    <div class="container">
+      <fieldset>
+            <legend>let's connect</legend>
+            <p>
+          <label for="name">name*</label> 
+             
+                <p><input id="name" name="name" size="25" class="required"/> </p>
+            <p> 
+                <label for="email">email address*</label></p>
+               
+               <p> <input id="email" name="email" size="25" class="required email" /> </p>
+           
+                 <label for="comment">what do you want to chat about?</label>
+              
+                <p><textarea name="comment" id="comment"  rows="5" cols="50"></textarea></p>
+            <p>
+                <input class="submit" type="submit" value="submit" /> </p>
+      </fieldset>
+    </body>
+    </form>
+
+<div class="navbar">
+  <a href="/">HOME</a>
+  <a href="events">EVENTS</a>
+    
+  <a href="about" class="active">ABOUT</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+ 
+
+</html>
